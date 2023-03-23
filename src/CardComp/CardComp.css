@@ -1,0 +1,165 @@
+.contenedor-cards{
+    width: 80vw;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    animation-name: volver;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    box-shadow: rgba(172, 255, 244, 0.3) 0px 19px 38px, rgba(57, 68, 68, 0.22) 0px 15px 12px;
+}
+
+.contenedor-foto{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nombre-empresa{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.nombre-puesto{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.datos-oferta{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.contenedor-foto img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+.contenedor-objetos-izquierda{
+    width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.contenedor-objetos-derecha{
+    display: flex;
+    gap: 10px;
+}
+
+.nombre-puesto{
+    margin-right: auto;
+    font-weight: 700;
+    text-align: start;
+}
+
+.nombre-empresa{
+    margin-right: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.nombre-empresa div{
+    background-color: blueviolet;
+    height: 25px;
+    width: 70px;
+    padding: 2px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.nombre-empresa div p{
+    font-size: 0.9rem;
+}
+
+.datos-oferta{
+    margin-right: auto;
+}
+
+.datos-oferta p{
+    text-align: start;
+}
+
+@keyframes saltar {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.05;
+    }
+}
+
+@keyframes volver {
+    from{
+        scale: 1.05;
+    }to{
+        scale: 1;
+    }
+}
+
+.contenedor-cards:hover{
+    animation-name: saltar;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+@media (max-width: 1044px) {
+    .contenedor-cards{
+        width: 80%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contenedor-cards{
+        width: 70%;
+        height: 200px;
+        flex-direction: column;
+    }
+    .contenedor-objetos-izquierda{
+        width: 100%;
+    }
+    .contenedor-objetos-derecha{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 50%;
+    }
+}
+
+@media (max-width: 726px) {
+    .contenedor-objetos-derecha{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 566px) {
+    .contenedor-cards{
+        height: 250px;
+        width: 80%;
+    }
+}

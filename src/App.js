@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { CardComp } from './CardComp';
+import { data } from './fakeBDD/data'
 
 function App() {
+  
+  console.log(data);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className='header-app'></header>
+      <main>
+      {data.map((post, index)=>{
+        return(
+          <CardComp
+          key={index}
+          companyName ={post.company_name}
+          companyLogo={post.company_logo}
+          featured={post.featured}
+          jobName={post.job_name}
+          jobPlace={post.job_place}
+          postDay={post.post_day}
+          schedule={post.schedule}
+          jobDescription={post.job_description}
+          />
+        )
+      })}
+      </main>
     </div>
   );
 }

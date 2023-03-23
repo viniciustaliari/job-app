@@ -1,0 +1,16 @@
+.contenedor-caracteristicas{
+    height: 30px;
+    background-color: rgb(53, 75, 68);
+    padding: 3px 10px 5px 10px;
+    display: flex;
+    border-radius: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contenedor-caracteristicas p{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: 700;
+    color: rgb(79, 243, 191);
+}
