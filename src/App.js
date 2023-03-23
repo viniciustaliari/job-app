@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 import { CardComp } from './CardComp';
 import { data } from './fakeBDD/data'
